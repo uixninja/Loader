@@ -1,0 +1,166 @@
+@import 'mixins';
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Roboto Thin'), local('Roboto-Thin'), url(../fonts/2tsd397wLxj96qwHyNIkxHYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+  
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(../fonts/d-6IYplOFocCacKzxwXSOJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(../fonts/Hgo13k-tfSpn0qi1SFdUfZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(../fonts/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url(../fonts/RxZJdnzeo3R5zSexge8UUZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body {
+    font-family: "Roboto", Arial, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    background: #151935;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, 
+body {
+    margin:0; 
+    padding:0; 
+    height:100%; 
+}
+
+.container {
+    position: relative;	
+    max-width: 400px; 
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.btn {
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 3px;
+    @include gradient(#0c42f5, #2bbef9);
+    width: 128px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    font-size: 13px;
+    border: none;
+
+    &.gray {
+        @include gradient(#1d213c, #2b314f);
+        color: #929bbd;
+        
+        &:before {
+            @include gradient(#232845, #292e4b);
+        }
+
+        &:after {
+            @include gradient(#292e4b, #232845);
+        }
+
+        &:hover {
+            @include gradient(#1d213c, #2b314f);
+
+            span {
+                @include gradient(#1d213c, #2b314f);
+            }
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+    
+    span {
+        margin: 2px;
+        height: 36px;
+        float: left;
+        width: 124px;
+        border-radius: 3px;
+        line-height: 36px;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+    }
+
+    &:before {
+        content: "";
+        width: 124px;
+        height: 36px;
+        top: 2px;
+        left: 2px;
+        position: absolute;
+        @include gradient(#0083fe, #1796ff);
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
+        width: 124px;
+        height: 36px;
+        top: 2px;
+        left: 2px;
+        position: absolute;
+        @include gradient(#1796ff, #0083fe);
+        z-index: 2;
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    &:hover {
+        @include gradient(#376eef, #3cafe5);
+        
+        span {
+            @include gradient(#3f7df2, #3bb3e5);
+        }
+        &:after {
+            opacity: 1;
+        }
+    }
+}
+
+

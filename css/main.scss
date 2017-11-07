@@ -1,0 +1,129 @@
+@import "common";
+@import "mixins";
+
+
+.container {
+    h1 {
+        color: #1b213e;
+        float: left;
+        width: 100%;
+        font: 700 88px/100% "Roboto";
+        text-align: center;
+        margin-top: 85px;
+        text-shadow: 0px 5px 33px rgba(0, 0, 0, 0.07);
+    }
+
+    h2 {
+        color: #fff;
+        float: left;
+        width: 100%;
+        font: 100 36px/100% "Roboto";
+        text-align: center;
+        margin-top: -30px;
+    }
+
+    h3 {
+        color: #333957;
+        float: left;
+        width: 100%;
+        font: normal 18px/100% "Roboto";
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .search {
+        float: left;
+        width: 100%;
+        height: 48px;
+        border-radius: 13px;
+        background: #1c2340;
+        margin-top: 45px;
+        @include box-shadow(0px 0px 50px 0px rgba(0, 0, 0, 0.07));
+
+        input {
+            &[type="button"] {
+                width: 35px;
+                height: 48px;
+                float: left;
+                border: none;
+                margin-left: 22px;
+                cursor: pointer;
+                background: url('../img/submit.png') no-repeat 50% 50%;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &[type="text"] {
+                color: #434f74;
+                font: 500 12px/48px "Roboto";
+                border: none;
+                background: none;
+                width: 330px;
+                float: left;
+
+                &::placeholder {
+                    color: #434f74;
+                }
+            }
+        }
+    }
+
+    .result {
+        float: left;
+        width: 100%;
+        border-radius: 13px;
+        overflow: hidden;
+        position: relative;
+        margin-top: 49px;
+        @include box-shadow(0px 0px 50px 0px rgba(0, 0, 0, 0.07));
+
+        .top {
+            height: 47px;
+            float: left;
+            width: 100%;
+            background: #282e4c;
+            padding: 0 32px;
+
+            span {
+                display: inline-block;
+                float: left;
+                color: #1796ff;
+                font-size: 14px;
+                line-height: 47px;
+            }
+
+            em {
+                display: inline-block;
+                float: right;
+                color: #6e7797;
+                font-size: 14px;
+                line-height: 47px;
+                font-style: normal;
+            }
+        }
+
+        .block {
+            height: 520px;
+            float: left;
+            width: 100%;
+            background: #1e1e41;
+
+            &.video {
+                text-align: center;
+            }
+        }
+    }
+
+    .buttons {
+        text-align: center;
+        float: left;
+        width: 100%;
+        padding: 55px 0;
+
+        .btn {
+            margin: 0 6px;
+        }
+    }
+}
