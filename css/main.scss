@@ -127,3 +127,23 @@
         }
     }
 }
+
+@media screen and (max-width: 450px) {
+    .container {
+        max-width: 360px;
+
+        .search {
+            input[type="text"] {
+                width: 290px;
+            }
+        }
+
+        .result {
+            .video {
+                video {
+                    margin-left: -20px;
+                }
+            }
+        }
+    }
+}

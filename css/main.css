@@ -286,4 +286,12 @@ body {
   .container .buttons .btn {
     margin: 0 6px; }
 
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 360px; }
+    .container .search input[type="text"] {
+      width: 290px; }
+    .container .result .video video {
+      margin-left: -20px; } }
+
 /*# sourceMappingURL=main.css.map */
